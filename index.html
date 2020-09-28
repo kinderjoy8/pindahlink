@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Welcome GummyBibi</title>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+      <h1 class="display-4">Welcome GummyBibi</h1>
+      <p class="lead">Ini link buat pindah kemana ge bebas wkwk</p>
+    </div>
+  </div>
+
+  <!-- isi nya -->
+  <div class="container">
+    <form action="test.html" id="myForm" method="post" onSubmit="return validasi()">
+      <div class="form-group">
+        <label for="nickname">Nickname gua</label>
+        <input type="text" class="form-control" id="nickname">
+      </div>
+      <div class="form-group">
+        <label for="binatang">Lu pengen jadi binatang apa</label>
+        <input type="text" class="form-control" id="binatang">
+        <small id="emailHelp" class="form-text text-muted">lu pernah bilang di chat kalo lu mau jadi binatang
+          apa</small>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    function validasi() {
+      var username = document.forms["myForm"]["nickname"].value;
+      var password = document.forms["myForm"]["binatang"].value;
+      if (username == "kinderjoy" && password == "ikan cupang") {
+        return true;
+      } else if (username == "" || password == "") {
+        alert("Masukan nickname dan binatang Anda");
+        return false;
+      } else {
+        alert("nickname atau binatang yang Anda masukan SALAH");
+        return false;
+      }
+    }
+  </script>
+
+</body>
+
+</html>
