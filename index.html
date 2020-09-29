@@ -52,35 +52,15 @@
         Selamat anda benar mau pindah kemana ge bebas tinggal pilih aja dibawah
       </div>
       <div class="card-body">
-        <h4><a href="https://www.instagram.com/herisetiawan8/">Link Instagram</a></h4>
-        <h4>Id line: herisetiawan8</h4>
-        <h4>Telegram: @herisetiawan8</h4>
+        <h4 id="ig"></h4>
+        <h4 id="line"></h4>
+        <h4 id="telegram"></h4>
       </div>
     </div>
   </div>
 
 
-  <script type="text/javascript">
-    function validasi() {
-      var nicknamelu = document.forms["myForm"]["nicknamelu"].value;
-      var nicknamegua = document.forms["myForm"]["nicknamegua"].value;
-      var password = document.forms["myForm"]["binatang"].value;
-      if (nicknamelu == "GummyBibi" && nicknamegua == "kinderjoy" && password == "ikan cupang") {
-        document.getElementById("isinya").style.display = "block";
-        return true;
-      } else if (nicknamelu == "" || nicknamegua == "" || password == "") {
-        alert("Masukan nickname dan binatang Anda");
-        return false;
-      } else {
-        alert("nickname atau binatang yang Anda masukan SALAH");
-        return false;
-      }
-    }
-
-    function cobadeh() {
-      document.getElementById("isinya").style.display = "block";
-    }
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 
