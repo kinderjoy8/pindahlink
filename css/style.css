@@ -1,0 +1,16 @@
+.jumbotron {
+  background-image: url("../img/bg-jumbotron.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  color: white;
+}
+
+body {
+  background: url("../img/bg-content.jpg") fixed center no-repeat;
+  background-size: cover;
+}
+
+#content {
+  color: white;
+}
