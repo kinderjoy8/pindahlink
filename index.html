@@ -9,48 +9,76 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 
-  <title>Welcome GummyBibi</title>
+  <title>Welcome Whisperian</title>
 </head>
 
 <body>
   <div class="jumbotron jumbotron-fluid text-center">
     <div class="container">
-      <h1 class="display-4">Welcome GummyBibi</h1>
+      <h1 class="display-4">Welcome Whisperian</h1>
       <p class="lead">Ini link buat pindah kemana ge bebas wkwk</p>
     </div>
   </div>
 
   <!-- isi nya -->
-  <div class="container">
-    <form action="https://www.instagram.com/herisetiawan8/" id="myForm" method="post" onSubmit="return validasi()">
+  <div id="content" class="container">
+    <form action="#" id="myForm" onSubmit="return validasi()">
       <div class="form-group">
-        <label for="nickname">Nickname gua</label>
-        <input type="text" class="form-control" id="nickname">
+        <label for="nicknamelu">Siapa nickname lu</label>
+        <input type="text" class="form-control" id="nicknamelu">
+      </div>
+      <div class="form-group">
+        <label for="nicknamegua">Siapa nickname gua</label>
+        <input type="text" class="form-control" id="nicknamegua">
       </div>
       <div class="form-group">
         <label for="binatang">Lu pengen jadi binatang apa</label>
         <input type="text" class="form-control" id="binatang">
-        <small id="emailHelp" class="form-text text-muted">lu pernah bilang di chat kalo lu mau jadi binatang
+        <small id="emailHelp" class="form-text">lu pernah bilang di chat kalo lu mau jadi binatang
           apa</small>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
+      <!-- <button class="btn btn-primary" onclick="cobadeh()">cek</button> -->
     </form>
   </div>
+  <br>
+
+  <!-- isi setelah login -->
+  <div class="container">
+    <div class="card" id="isinya" style="display:none;">
+      <div class="card-header text-center">
+        Selamat anda benar mau pindah kemana ge bebas tinggal pilih aja dibawah
+      </div>
+      <div class="card-body">
+        <h4><a href="https://www.instagram.com/herisetiawan8/">Link Instagram</a></h4>
+        <h4>Id line: herisetiawan8</h4>
+        <h4>Telegram: @herisetiawan8</h4>
+      </div>
+    </div>
+  </div>
+
 
   <script type="text/javascript">
     function validasi() {
-      var username = document.forms["myForm"]["nickname"].value;
+      var nicknamelu = document.forms["myForm"]["nicknamelu"].value;
+      var nicknamegua = document.forms["myForm"]["nicknamegua"].value;
       var password = document.forms["myForm"]["binatang"].value;
-      if (username == "kinderjoy" && password == "ikan cupang") {
+      if (nicknamelu == "GummyBibi" && nicknamegua == "kinderjoy" && password == "ikan cupang") {
+        document.getElementById("isinya").style.display = "block";
         return true;
-      } else if (username == "" || password == "") {
+      } else if (nicknamelu == "" || nicknamegua == "" || password == "") {
         alert("Masukan nickname dan binatang Anda");
         return false;
       } else {
         alert("nickname atau binatang yang Anda masukan SALAH");
         return false;
       }
+    }
+
+    function cobadeh() {
+      document.getElementById("isinya").style.display = "block";
     }
   </script>
 
